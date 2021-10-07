@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <h1>Accounts</h1>
+    <p>Login</p>
+    <form class="site-form" action="{% url 'accounts:login' %}" method="post" >
+        {% csrf_token %}
+        {{ form.as_p}}
+        {% if request.GET.next %}
+            <input type="hidden" name="next" value="{{ request.GET.next }}">
+        {% endif %}
+        <input type="submit" value="Login">
+    </form>
+
+{% endblock content %}

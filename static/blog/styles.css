@@ -1,0 +1,12 @@
+h1{
+    color: red;
+}
+.errorlist{
+    list-style-type: none;
+    color: rgb(233, 15, 15);
+
+}
+
+.form-text{
+    display: none;
+}
